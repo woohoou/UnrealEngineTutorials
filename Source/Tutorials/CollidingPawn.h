@@ -3,6 +3,8 @@
 #pragma once
 
 #include "GameFramework/Pawn.h"
+#include "CollidingPawnMovementComponent.h"
+#include "OrbitComponent.h"
 #include "CollidingPawn.generated.h"
 
 UCLASS()
@@ -25,4 +27,14 @@ public:
 
 	
     UParticleSystemComponent *OurParticleSystemComponent;
+
+	class UCollidingPawnMovementComponent* OurMovementComponent;
+	URotatingMovementComponent* OrbitComponent;
+
+	virtual UPawnMovementComponent* GetMovementComponent() const override;
+
+	void MoveForward(float AxisValue);
+	void MoveRight(float AxisValue);
+	void Turn(float AxisValue);
+	void ParticleToggle();
 };

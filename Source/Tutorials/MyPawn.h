@@ -34,8 +34,8 @@ public:
     void InstantGrow();
     float AccelerationX;
     float AccelerationY;
-    Boolean MovingX;
-    Boolean MovingY;
+    bool MovingX;
+    bool MovingY;
     
     // Input variables
     FVector CurrentVelocity;
