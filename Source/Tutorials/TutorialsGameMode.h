@@ -12,8 +12,8 @@ UCLASS()
 class TUTORIALS_API ATutorialsGameMode : public AGameMode
 {
 	GENERATED_BODY()
-	
-	
+
+	virtual void StartPlay() override;
 	
 	
 };
